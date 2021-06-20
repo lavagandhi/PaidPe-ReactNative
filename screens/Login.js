@@ -5,6 +5,7 @@ import {
   Dimensions,
   StatusBar,
   KeyboardAvoidingView,
+  TouchableOpacity
 } from "react-native";
 import axios from 'axios';
 import jwt_decode from "jwt-decode";
@@ -179,6 +180,13 @@ export default function Login({ navigation }) {
                       </Text>
                     </Button>
                   </Block>
+                  <Block flex center>
+                  <TouchableOpacity style={styles.signupText} onPress={() => navigation.navigate("Register")}>
+                      <Text bold size={12} color="#8898AA">
+                        Create new account?
+                      </Text>
+                  </TouchableOpacity>
+                  </Block>
                 </KeyboardAvoidingView>
               </Block>
             </Block>
@@ -215,10 +223,13 @@ const styles = StyleSheet.create({
   },
   createButton: {
     width: width * 0.5,
-    marginTop: 25,
+    marginTop: 10,
   },
   errorMsg: {
     color: '#FF0000',
     fontSize: 14,
   },
+  signupText:{
+    paddingVertical:10
+  }
 });

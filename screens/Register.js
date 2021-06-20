@@ -24,41 +24,11 @@ class Register extends React.Component {
         >
           <Block safe flex middle>
             <Block style={styles.registerContainer}>
-              <Block flex={0.25} middle style={styles.socialConnect}>
-                <Text color="#8898AA" size={12}>
-                  Sign up with
-                </Text>
-                <Block row style={{ marginTop: theme.SIZES.BASE }}>
-                  <Button style={{ ...styles.socialButtons, marginRight: 30 }}>
-                    <Block row>
-                      <Icon
-                        name="logo-github"
-                        family="Ionicon"
-                        size={14}
-                        color={"black"}
-                        style={{ marginTop: 2, marginRight: 5 }}
-                      />
-                      <Text style={styles.socialTextButtons}>GITHUB</Text>
-                    </Block>
-                  </Button>
-                  <Button style={styles.socialButtons}>
-                    <Block row>
-                      <Icon
-                        name="logo-google"
-                        family="Ionicon"
-                        size={14}
-                        color={"black"}
-                        style={{ marginTop: 2, marginRight: 5 }}
-                      />
-                      <Text style={styles.socialTextButtons}>GOOGLE</Text>
-                    </Block>
-                  </Button>
-                </Block>
-              </Block>
+             
               <Block flex>
                 <Block flex={0.17} middle>
-                  <Text color="#8898AA" size={12}>
-                    Or sign up the classic way
+                  <Text color="#8898AA" size={18}>
+                     Sign Up
                   </Text>
                 </Block>
                 <Block flex center>
@@ -67,10 +37,10 @@ class Register extends React.Component {
                     behavior="padding"
                     enabled
                   >
-                    <Block width={width * 0.8} style={{ marginBottom: 15 }}>
+                    <Block width={width * 0.8} style={{ marginBottom: 5 }}>
                       <Input
                         borderless
-                        placeholder="Name"
+                        placeholder="First Name"
                         iconContent={
                           <Icon
                             size={16}
@@ -82,7 +52,22 @@ class Register extends React.Component {
                         }
                       />
                     </Block>
-                    <Block width={width * 0.8} style={{ marginBottom: 15 }}>
+                    <Block width={width * 0.8} style={{ marginBottom: 5 }}>
+                      <Input
+                        borderless
+                        placeholder="Last Name"
+                        iconContent={
+                          <Icon
+                            size={16}
+                            color={argonTheme.COLORS.ICON}
+                            name="hat-3"
+                            family="ArgonExtra"
+                            style={styles.inputIcons}
+                          />
+                        }
+                      />
+                    </Block>
+                    <Block width={width * 0.8} style={{ marginBottom: 5 }}>
                       <Input
                         borderless
                         placeholder="Email"
@@ -97,7 +82,7 @@ class Register extends React.Component {
                         }
                       />
                     </Block>
-                    <Block width={width * 0.8}>
+                    <Block width={width * 0.8} style={{ marginBottom: 5 }}>
                       <Input
                         password
                         borderless
@@ -112,7 +97,7 @@ class Register extends React.Component {
                           />
                         }
                       />
-                      <Block row style={styles.passwordCheck}>
+                      {/* <Block row style={styles.passwordCheck}>
                         <Text size={12} color={argonTheme.COLORS.MUTED}>
                           password strength:
                         </Text>
@@ -120,9 +105,54 @@ class Register extends React.Component {
                           {" "}
                           strong
                         </Text>
-                      </Block>
+                      </Block> */}
                     </Block>
-                    <Block row width={width * 0.75}>
+                    <Block width={width * 0.8} style={{ marginBottom: 5 }}>
+                      <Input
+                        borderless
+                        placeholder="Gender"
+                        iconContent={
+                          <Icon
+                            size={16}
+                            color={argonTheme.COLORS.ICON}
+                            name="ic_mail_24px"
+                            family="ArgonExtra"
+                            style={styles.inputIcons}
+                          />
+                        }
+                      />
+                    </Block>
+                    <Block width={width * 0.8} style={{ marginBottom: 5 }}>
+                      <Input
+                        borderless
+                        placeholder="Phone No"
+                        iconContent={
+                          <Icon
+                            size={16}
+                            color={argonTheme.COLORS.ICON}
+                            name="ic_mail_24px"
+                            family="ArgonExtra"
+                            style={styles.inputIcons}
+                          />
+                        }
+                      />
+                    </Block>
+                    <Block width={width * 0.8} style={{ marginBottom: 5 }}>
+                      <Input
+                        borderless
+                        placeholder="Date of birth"
+                        iconContent={
+                          <Icon
+                            size={16}
+                            color={argonTheme.COLORS.ICON}
+                            name="ic_mail_24px"
+                            family="ArgonExtra"
+                            style={styles.inputIcons}
+                          />
+                        }
+                      />
+                    </Block>
+                    {/* <Block row width={width * 0.75}>
                       <Checkbox
                         checkboxStyle={{
                           borderWidth: 3
@@ -140,7 +170,7 @@ class Register extends React.Component {
                       >
                         Privacy Policy
                       </Button>
-                    </Block>
+                    </Block> */}
                     <Block middle>
                       <Button color="primary" style={styles.createButton}>
                         <Text bold size={14} color={argonTheme.COLORS.WHITE}>
@@ -162,7 +192,7 @@ class Register extends React.Component {
 const styles = StyleSheet.create({
   registerContainer: {
     width: width * 0.9,
-    height: height * 0.875,
+    height: height * 0.855,
     backgroundColor: "#F4F5F7",
     borderRadius: 4,
     shadowColor: argonTheme.COLORS.BLACK,

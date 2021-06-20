@@ -13,7 +13,7 @@ import CardItem, { SLIDER_WIDTH, ITEM_WIDTH } from '../components/CardItem'
 import data from '../constants/data'
 
 
-class Home extends React.Component {
+class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.isCarousel = React.createRef();
@@ -409,4 +409,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Home;
+export default Dashboard;

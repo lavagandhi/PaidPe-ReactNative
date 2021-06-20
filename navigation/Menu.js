@@ -20,16 +20,10 @@ function CustomDrawerContent({ drawerPosition, navigation, profile, focused, sta
     "Profile",
     "Account",
     "Elements",
-    "Articles"
+    "Articles",
+    "User"
   ];
   
-
-  const onSubmit = () => {
-    alert('userToken') 
-  }
-
-// const { signOut } = React.useContext(AuthContext);
-
 const signOut = () => {
   AsyncStorage.clear();
   navigation.navigate("Login")
